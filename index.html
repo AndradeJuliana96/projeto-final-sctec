@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projeto Final</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header class="hero">
+        <nav class="navbar">
+            <img src="img/logo.png" class="logo" alt="logo">
+            <button id="hamburguer">☰</button>
+            <ul class="menu" id="menu">
+                <li> <a href="#sobre">Sobre Mim</a></li>
+                <li> <a href="#projetos">Projetos</a></li>
+                <li> <a href="#habilidades">Habilidades</a></li>
+                <li> <a href="#contato">Contato</a></li>
+            </ul>
+        </nav>
+        <div class="hero-container">
+            <p class="intro">Bem-vindo(a) ao meu projeto final, da trilha </p>
+            <h2>Desenvolvimento de Software</h2>
+            <p class="descricao">Este espaço reúne meus aprendizados, experiências e experimentos na área de tecnologia,
+                mostrando como minha trajetória profissional e a paixão por novos desafios me trouxeram até aqui.
+                Explore e conheça um pouco mais sobre mim e meu caminho no mundo da programação.</p>
+        </div>
+
+
+    </header>
+
+    <section id="sobre">
+        <div class="sobre">
+            <p class="intro-sobre">Muito prazer, </p>
+            <h2>Sou a Juliana!</h2>
+            <p class="descricao-sobre">Comecei a trabalhar aos 16 anos como estagiária auxiliando na criação de sites em
+                WordPress, depois atuei como agente publicitária e, há 10 anos, sou corretora de imóveis. A tecnologia
+                sempre me interessou e, com o SCTEC, encontrei a oportunidade de me aprofundar em programação e explorar
+                novos caminhos profissionais.</p>
+        </div>
+    </section>
+    <section id="projetos">
+        <h2>Meus Projetos</h2>
+        <div class="projetos-container">
+            <div class="card" onclick="carregarProjeto('calculadora')">
+                <img src="./img/menu-element.png" alt="Calculadora">
+                <div class="overlay">Calculadora</div>
+            </div>
+
+            <div class="card" onclick="carregarProjeto('velha')">
+                <img src="./img/menu-element.png" alt="Jogo da Velha">
+                <div class="overlay">Jogo da Velha</div>
+            </div>
+
+            <div class="card" onclick="carregarProjeto('simulador')">
+                <img src="./img/menu-element.png" alt="Simulador">
+               <div class="overlay">Simulador Financeiro</div>
+            </div>
+
+            <div class="card"onclick="carregarProjeto('toDo')">
+                <img src="./img/menu-element.png" alt="To-do">
+                <div class="overlay">To-do List</div>
+            </div>
+        </div>
+         <div id="area-projeto"></div>
+    </section>
+
+    <section id="habilidades">
+        <h2>Habilidades</h2>
+        <p>
+            Tecnologias e ferramentas que utilizo para desenvolver soluções completas.
+        </p>
+        <div class="habilidades-lista">
+            <div class="habilidades-card">
+                <h3>HTML</h3>
+                <span>básico</span>
+            </div>
+            <div class="habilidades-card">
+                <h3>CSS</h3>
+                <span>básico</span>
+            </div>
+            <div class="habilidades-card">
+                <h3>Javascript</h3>
+                <span>básico</span>
+            </div>
+        </div>
+    </section>
+
+    <section id="contato">
+        <h2>Contato</h2>
+        <p>
+            Tem algum projeto em mente e quer tirar do papel? Fale comigo agora mesmo!
+        </p>
+        <div class="contatos-lista">
+            <div class="contato-item">
+                <strong>Email</strong><br>
+                <span>andrade96.juliana@gmail.com</span>
+            </div>
+
+            <div class="contato-item">
+                <strong>Telefone</strong><br>
+                <span>(47) 99783-7715</span>
+            </div>
+
+            <div class="contato-item">
+                <strong>Localização</strong><br>
+                <span>Joinville/SC</span>
+            </div>
+
+        </div>
+        <div class="redes-sociais">
+            <a href="https://github.com/AndradeJuliana96"target="_blank" >GitHub</a>
+            <a href="https://www.instagram.com/corretora.juliana.andrade/"target="_blank" >Instagram</a>
+            <a href="https://www.linkedin.com/in/julianaaparecidaandrade/"target="_blank" >Linkedin</a>
+        </div>
+
+        
+<script src="velha.js"></script>
+<script src="projetos.js"></script>
+<script src="simulador.js"></script>
+<script src="calculadora.js"></script>
+<script src="toDo.js"></script>
+
+
+    </section>
+    <footer class="footer">
+        <p> &copy; 2026 Juliana. Desenvolvido por Juliana.</p>
+    </footer>
+    <script>
+        let button= document.getElementById("hamburguer");
+        const menu = document.getElementById("menu");
+
+        button.addEventListener("click", function(){
+            menu.classList.toggle("ativa");
+        })
+    </script>
+</body>
+
+</html>
